@@ -56,7 +56,7 @@ for(d in 1:nrow(vmx)){
   
   
   if(d==1){
-  mtext("age BP", side=2, outer=F, adj = 0.45, line=6, cex = 1.5)
+  mtext("age cal yr BP", side=2, outer=F, adj = 0.45, line=6, cex = 1.5)
     
   }
   if(d==9){
@@ -106,7 +106,7 @@ for(d in 1:nrow(vmx)){
   
   
   if(d==1){
-    mtext("age BP", side=2, outer=F, adj = 0.45, line=6, cex = 1.5)
+    mtext("age cal yr BP", side=2, outer=F, adj = 0.45, line=6, cex = 1.5)
     
   }
   if(d==9){

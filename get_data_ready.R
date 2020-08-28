@@ -21,7 +21,7 @@ nt  <- aggregate(n$count, by=list(n$e, n$depth, n$newname), FUN=sum)  # get rid 
 colnames(nt) <- colnames(n)
 nt <- nt[!(nt$e==1202 & nt$depth==40),]                               
 nt[nt$e==1202,1] <- 1173                                              # merge Køemelná 1 and 2
-si[si$e.==refid,3] <- c( "Køemelná - reference site")
+si[si$e.==refid,3] <- c( "Skláøské Valley, ref. site")
 
 ### STEP 0
         sm <- aggregate(nt$count, by=list(nt$e, nt$depth), FUN=sum) 
@@ -39,8 +39,8 @@ si[si$e.==refid,3] <- c( "Køemelná - reference site")
         
         
         tiff("target_sums_tw.tiff", width=1200,height = 1000, compression = "lzw", pointsize = 23)
-        par(mfrow=c(2,2), mar=c(6,6,2,2), mgp=c(4,0.7,0))
-        boxplot(sma$x~sma$e., names=si$sigle, las=2, ylab="grains in samples", col="gray")
+        par(mfrow=c(2,2), mar=c(8,6,2,2), mgp=c(4,0.7,0), oma=c(2,0,0,0))
+        boxplot(sma$x~sma$e., names=si$sigle, las=2, ylab="grains in samples",xlab="", col="gray")
         abline(h=quantile(sma$x)[2], col="red")
         #abline(h=330, col="blue")
         #barplot((sort(sma$x)), ylim=c(100,800), las=2)
@@ -50,7 +50,7 @@ si[si$e.==refid,3] <- c( "Køemelná - reference site")
         abline(v=quantile(sma$x)[2], col="red")
         #abline(v=330, col="blue")
         
-        boxplot(di$dyf~di$site, las=2, ylab="years between samples", col="gray")
+        boxplot(di$dyf~di$site, las=2,names=si$sigle, ylab="years between samples",xlab="", col="gray", xpd=T)
         abline(h=quantile(di$dyf)[4], col="blue")
         hist(di$dyf, breaks=80, main = "", xlab="years between samples", las=2, col="gray")
         abline(v=quantile(di$dyf)[4], col="blue")

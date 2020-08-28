@@ -63,7 +63,7 @@ for(d in 1:NROW(dr)){
   lines(roB[,dr[d]]/tsm , roB[,"Group.1"], col= "black", lwd=2)
 
   if(d==1){
-    mtext("age BP", side=2, outer=F, adj = 0.45, line=6)
+    mtext("age cal yr BP", side=2, outer=F, adj = 0.45, line=6)
   }
   if(d==3){
     mtext("%", side=1,  adj = 0, line=3)

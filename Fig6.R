@@ -40,7 +40,7 @@ axis(side=4,at=rev(seq(0,1,1/49)-((1/49)/2))[c(3,10,19, 29, 41)], labels = rev(c
 
 legend("bottom" , paste(si$V4 ,"-", si$sigle  ), ncol = 7, bty = "n", cex=1, xpd = T, inset=-0.2, x.intersp = 0.5)
 
-mtext("age BP", side=2, outer=T, adj = 0.35, line=0.5, cex=1.5)
+mtext("age cal yr BP", side=2, outer=T, adj = 0.35, line=0.5, cex=1.5)
 
 dev.off()
 

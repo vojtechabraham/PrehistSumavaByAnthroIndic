@@ -54,7 +54,7 @@ axis(1, at=wer2 ,labels = seq(1,7,2)[1:NROW(wer2)], las=1, cex.axis=.6,  tcl=par
 par(mgp=c(5,1,0))
 axis(side=4,at=rev(seq(0,1,1/49)-((1/49)/2))[c(3,10,19, 29, 41)], labels = rev(c("Z1", "Z2", "Z3", "Z4", "Z5")), col.ticks = "transparent", col = "transparent",las=2, cex.axis=1.3, font=1)
 
-mtext("age BP", side=2, outer=T, adj = 0.35, line=0.5)
+mtext("age cal yr BP", side=2, outer=T, adj = 0.35, line=0.5)
 mtext("number of sites", side=1, outer=T, adj = 0.5, line=1.5)
 
 dev.off()
